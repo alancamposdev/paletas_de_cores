@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,42 +14,31 @@
     <meta name="robots" content="index, follow" />
     <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    />
 
     <!-- js  -->
-    <script src="js/script.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/footer.js" defer></script>
   </head>
-  
+
   <body>
     <section class="paleta-container">
       <h1>Gerador de Paleta</h1>
-      <div class="cores">
-        <div class="cor" id="cor1">
-          <span class="codigo">#FFFFFF</span>
-        </div>
-        <div class="cor" id="cor2">
-          <span class="codigo">#FFFFFF</span>
-        </div>
-        <div class="cor" id="cor3">
-          <span class="codigo">#FFFFFF</span>
-        </div>
-        <div class="cor" id="cor4">
-          <span class="codigo">#FFFFFF</span>
-        </div>
-        <div class="cor" id="cor5">
-          <span class="codigo">#FFFFFF</span>
-        </div>
-      </div>
+      <div class="cores"></div>
       <button id="btnGerar" aria-label="Gerar uma nova paleta de cores">
         Gerar Paleta
       </button>
-
+      <div id="alerta-copiado" class="alerta">Cor copiada!</div>
     </section>
 
     <footer>
       <p>
         Desenvolvido por
-        <a href="#" target="_blank">Alan Campos</a> - <span>2025</span>
+        <a href="#" target="_blank">Alan Campos</a> -
+        <span id="ano-atual">20**</span>
       </p>
     </footer>
   </body>
