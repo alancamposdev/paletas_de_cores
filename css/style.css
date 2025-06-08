@@ -1,0 +1,107 @@
+:root {
+  --cor-fundo: #f4f4f4;
+  --cor-texto: #333;
+  --cor-botao: #0056b3;
+  --cor-botao-hover: #0056b3;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Poppins", sans-serif;
+}
+
+
+.paleta-container {
+  max-width: 600px;
+  margin: auto;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--cor-fundo);
+  padding: 3rem;
+}
+
+.cores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;  
+  margin-bottom: 1rem;
+}
+
+.cores div {
+  background: var(--cor-botao);
+  color: white;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1rem;
+  box-shadow: -4px 4px 9px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.cores div:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5);
+}
+
+.cores div:active {
+  transform: scale(0.9);
+}
+.cores div span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0.5rem;
+}
+.cores div span::before {
+  content: attr(data-color);
+  display: block;
+  font-size: 0.8rem;
+}
+.cores div span::after {
+  content: attr(data-hex);
+  display: block;
+  font-size: 0.8rem;
+}
+#btnGerar {
+  background-color: var(--cor-botao);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+#btnGerar:hover {
+  background-color: var(--cor-botao-hover);
+}
+
+/* rodapé  */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+}
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #0056b3;
+}
